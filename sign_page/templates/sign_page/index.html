@@ -28,7 +28,8 @@
                 <!-- Tab panes -->
                 <div class="tab-content tabs">
                     <div role="tabpanel" class="tab-pane fade in active" id="Section1">
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" method="post">
+                            {% csrf_token %}
                             <div class="form-group">
                                 <label for="exampleInputEmail1">логин</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1">
@@ -45,7 +46,7 @@
                                 <span class="text">Запомнить меня</span>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-default">Зарегистрироваться</button>
+                                <button type="submit" id="SaveData" onclick="data_transfer()" class="btn btn-default">Зарегистрироваться</button>
                             </div>
                             <div class="form-group forgot-pass">
                                 <button type="submit" class="btn btn-default">Забыль пароль</button>

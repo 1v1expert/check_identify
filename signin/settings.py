@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sign_page',
+    'sign_page'
 ]
+SESSION_ENGINE = 'django.contrib.sessions.backends.file'
+#'django.contrib.sessions.backends.signed_cookies',
+#]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -48,7 +51,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+    ]
+
+
 
 ROOT_URLCONF = 'signin.urls'
 
