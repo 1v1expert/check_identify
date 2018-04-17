@@ -27,6 +27,7 @@ var input_tracking = function () {
 
 var data_transfer = function () {
     document.cookie = "arr=" + arr_delta;
+    document.cookie = "name=" + document.getElementById('exampleInputLogin').value
 };
 
 var save_data = function (data, filename, type) {
